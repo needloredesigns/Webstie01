@@ -1,24 +1,24 @@
-<footer class="site-footer">
+<footer class="site-footer" style="background: {{ section.settings.footer_bg }}; color: {{ section.settings.footer_text_color }};">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <span class="logo-text">NEEDLORE</span>
-      <p class="site-footer__about">{{ section.settings.about }}</p>
+      <span class="logo-text" style="color: {{ section.settings.footer_heading_color }};">NEEDLORE</span>
+      <p class="site-footer__about" style="color: {{ section.settings.footer_text_color }};">{{ section.settings.about }}</p>
       <div class="site-footer__social">
-        {% if section.settings.social_instagram != blank %}<a href="{{ section.settings.social_instagram }}" aria-label="Instagram" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>{% endif %}
-        {% if section.settings.social_facebook != blank %}<a href="{{ section.settings.social_facebook }}" aria-label="Facebook" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>{% endif %}
+        {% if section.settings.social_instagram != blank %}<a href="{{ section.settings.social_instagram }}" aria-label="Instagram" class="social-link" style="border-color: {{ section.settings.footer_text_color }}; color: {{ section.settings.footer_text_color }};"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>{% endif %}
+        {% if section.settings.social_facebook != blank %}<a href="{{ section.settings.social_facebook }}" aria-label="Facebook" class="social-link" style="border-color: {{ section.settings.footer_text_color }}; color: {{ section.settings.footer_text_color }};"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>{% endif %}
       </div>
     </div>
     <div class="site-footer__links">
-      <h4 class="site-footer__heading">Shop</h4>
+      <h4 class="site-footer__heading" style="color: {{ section.settings.footer_heading_color }}; font-weight: {{ section.settings.heading_weight }};">Shop</h4>
       <ul>
         {% for link in linklists[section.settings.menu].links %}
-          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          <li><a href="{{ link.url }}" style="color: {{ section.settings.footer_text_color }};">{{ link.title }}</a></li>
         {% endfor %}
       </ul>
     </div>
     <div class="site-footer__links">
-      <h4 class="site-footer__heading">Help</h4>
-      <ul>
+      <h4 class="site-footer__heading" style="color: {{ section.settings.footer_heading_color }}; font-weight: {{ section.settings.heading_weight }};">Help</h4>
+      <ul style="color: {{ section.settings.footer_text_color }};">
         <li>Shipping & Delivery</li>
         <li>Returns & Exchanges</li>
         <li>Size Guide</li>
@@ -26,15 +26,15 @@
       </ul>
     </div>
     <div class="site-footer__newsletter">
-      <h4 class="site-footer__heading">Newsletter</h4>
-      <p>10% off your first order — plus first dibs on new drops.</p>
+      <h4 class="site-footer__heading" style="color: {{ section.settings.footer_heading_color }}; font-weight: {{ section.settings.heading_weight }};">Newsletter</h4>
+      <p style="color: {{ section.settings.footer_text_color }};">10% off your first order — plus first dibs on new drops.</p>
       {% form 'customer', class: 'newsletter-form' %}
-        <input type="email" name="contact[email]" placeholder="your@email.com" required>
-        <button type="submit">Join</button>
+        <input type="email" name="contact[email]" placeholder="your@email.com" required style="border-color: {{ section.settings.footer_text_color }};">
+        <button type="submit" style="background: {{ section.settings.footer_heading_color }}; color: {{ section.settings.footer_bg }};">Join</button>
       {% endform %}
     </div>
   </div>
-  <div class="site-footer__bottom">
+  <div class="site-footer__bottom" style="border-top-color: {{ section.settings.footer_text_color | color_modify: 'alpha', 0.1 }}; color: {{ section.settings.footer_text_color | color_modify: 'alpha', 0.6 }};">
     <p>&copy; {{ 'now' | date: '%Y' }} NEEDLORE — All rights reserved.</p>
     <p>Privacy · Terms · Cookies</p>
   </div>
@@ -44,6 +44,12 @@
 {
   "name": "Footer",
   "settings": [
+    { "type": "color", "id": "footer_bg", "label": "Footer Background", "default": "#f0ebe4" },
+    { "type": "color", "id": "footer_text_color", "label": "Footer Text Color", "default": "#8a7a7a" },
+    { "type": "color", "id": "footer_heading_color", "label": "Footer Heading Color", "default": "#2a1f1f" },
+    { "type": "select", "id": "heading_weight", "label": "Heading Weight", "options": [
+      { "value": "400", "label": "Regular" }, { "value": "600", "label": "Bold" }
+    ], "default": "600" },
     { "type": "text", "id": "about", "label": "About text", "default": "Quietly considered womenswear — thoughtful pieces, made to be lived in." },
     { "type": "link_list", "id": "menu", "label": "Footer menu", "default": "footer" },
     { "type": "url", "id": "social_instagram", "label": "Instagram URL" },

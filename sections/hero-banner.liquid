@@ -1,23 +1,51 @@
 <section class="hero-banner" style="background-image: url('{{ section.settings.image | image_url: width: 1920 }}');">
-  <div class="hero-banner__overlay"></div>
+  <div class="hero-banner__overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,{{ section.settings.overlay_opacity | divided_by: 100.0 }}));"></div>
   <div class="hero-banner__content hero-banner--{{ section.settings.alignment }}">
-    {% if section.settings.eyebrow != blank %}<span class="hero-banner__eyebrow">{{ section.settings.eyebrow }}</span>{% endif %}
-    <h1 class="hero-banner__title">{{ section.settings.title }}</h1>
+    {% if section.settings.eyebrow != blank %}
+      <span class="hero-banner__eyebrow" style="color: {{ section.settings.text_color }}; font-weight: {{ section.settings.eyebrow_weight }}; font-size: {{ section.settings.eyebrow_size }}px;">
+        {{ section.settings.eyebrow }}
+      </span>
+    {% endif %}
+    <h1 class="hero-banner__title" style="color: {{ section.settings.text_color }}; font-weight: {{ section.settings.title_weight }}; font-size: {{ section.settings.title_size }}px;">
+      {{ section.settings.title }}
+    </h1>
     {% if section.settings.link != blank %}
-      <a href="{{ section.settings.link }}" class="hero-banner__cta">{{ section.settings.cta_text }}</a>
+      <a href="{{ section.settings.link }}" class="hero-banner__cta" style="background: {{ section.settings.cta_bg }}; color: {{ section.settings.cta_text_color }};">
+        {{ section.settings.cta_text }}
+      </a>
     {% endif %}
   </div>
 </section>
+
+<style>
+  @media (min-width: 1024px) {
+    .hero-banner__title { font-size: {{ section.settings.title_size | times: 1.5 }}px !important; }
+  }
+</style>
 
 {% schema %}
 {
   "name": "Hero Banner",
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 100, "step": 5, "unit": "%", "label": "Overlay Opacity", "default": 30 },
+    { "type": "header", "content": "Text Styling" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#ffffff" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow text", "default": "Summer Edit" },
+    { "type": "range", "id": "eyebrow_size", "min": 10, "max": 24, "step": 1, "unit": "px", "label": "Eyebrow Size", "default": 12 },
+    { "type": "select", "id": "eyebrow_weight", "label": "Eyebrow Weight", "options": [
+      { "value": "300", "label": "Light" }, { "value": "400", "label": "Regular" }, { "value": "600", "label": "Bold" }
+    ], "default": "400" },
     { "type": "text", "id": "title", "label": "Title", "default": "New Collection" },
+    { "type": "range", "id": "title_size", "min": 24, "max": 80, "step": 2, "unit": "px", "label": "Title Size", "default": 48 },
+    { "type": "select", "id": "title_weight", "label": "Title Weight", "options": [
+      { "value": "300", "label": "Light" }, { "value": "400", "label": "Regular" }, { "value": "500", "label": "Medium" }, { "value": "700", "label": "Bold" }
+    ], "default": "500" },
+    { "type": "header", "content": "Button Styling" },
     { "type": "text", "id": "cta_text", "label": "Button text", "default": "Shop Now" },
     { "type": "url", "id": "link", "label": "Button link" },
+    { "type": "color", "id": "cta_bg", "label": "Button Background", "default": "#faf8f5" },
+    { "type": "color", "id": "cta_text_color", "label": "Button Text", "default": "#2a1f1f" },
     { "type": "select", "id": "alignment", "label": "Alignment", "default": "center", "options": [
       { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }, { "value": "right", "label": "Right" }
     ]}

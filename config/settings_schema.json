@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "name": "theme_info",
+    "theme_name": "NEEDLORE",
+    "theme_version": "1.1.0",
+    "theme_author": "NEEDLORE Designs"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Global Colors"
+      },
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background Color",
+        "default": "#faf8f5"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text Color",
+        "default": "#2a1f1f"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Accent Color",
+        "default": "#b87a8a"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Secondary Accent Color",
+        "default": "#5a3a42"
+      },
+      {
+        "type": "color",
+        "id": "color_muted",
+        "label": "Muted Text Color",
+        "default": "#8a7a7a"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Border Color",
+        "default": "#e5ddd5"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Headings (Serif)"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_display",
+        "label": "Heading Font",
+        "default": "cormorant_garamond_n5"
+      },
+      {
+        "type": "range",
+        "id": "heading_base_size",
+        "min": 20,
+        "max": 60,
+        "step": 2,
+        "unit": "px",
+        "label": "Heading Base Size",
+        "default": 32
+      },
+      {
+        "type": "select",
+        "id": "heading_weight",
+        "label": "Heading Weight",
+        "options": [
+          { "value": "300", "label": "Light" },
+          { "value": "400", "label": "Regular" },
+          { "value": "500", "label": "Medium" },
+          { "value": "600", "label": "Semi-Bold" },
+          { "value": "700", "label": "Bold" }
+        ],
+        "default": "500"
+      },
+      {
+        "type": "header",
+        "content": "Body Text (Sans)"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_sans",
+        "label": "Body Font",
+        "default": "dm_sans_n4"
+      },
+      {
+        "type": "range",
+        "id": "body_base_size",
+        "min": 12,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "label": "Body Base Size",
+        "default": 16
+      },
+      {
+        "type": "select",
+        "id": "body_weight",
+        "label": "Body Weight",
+        "options": [
+          { "value": "300", "label": "Light" },
+          { "value": "400", "label": "Regular" },
+          { "value": "500", "label": "Medium" },
+          { "value": "600", "label": "Semi-Bold" }
+        ],
+        "default": "400"
+      }
+    ]
+  },
+  {
+    "name": "Header & Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Styling"
+      },
+      {
+        "type": "range",
+        "id": "header_logo_size",
+        "min": 18,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Logo Font Size",
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "header_nav_size",
+        "min": 10,
+        "max": 18,
+        "step": 1,
+        "unit": "px",
+        "label": "Nav Link Size",
+        "default": 11
+      },
+      {
+        "type": "header",
+        "content": "Footer Styling"
+      },
+      {
+        "type": "color",
+        "id": "footer_bg",
+        "label": "Footer Background",
+        "default": "#f0ebe4"
+      }
+    ]
+  }
+]

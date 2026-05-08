@@ -1,21 +1,21 @@
-<header class="site-header" role="banner">
+<header class="site-header" role="banner" style="background: {{ section.settings.header_bg }};">
   <div class="site-header__inner">
-    <button class="site-header__menu-toggle" aria-label="Menu" onclick="document.getElementById('mobile-nav').classList.toggle('is-open')">
+    <button class="site-header__menu-toggle" aria-label="Menu" onclick="document.getElementById('mobile-nav').classList.toggle('is-open')" style="color: {{ section.settings.nav_color }};">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
 
     <nav class="site-header__nav">
       {% for link in section.settings.menu.links %}
-        <a href="{{ link.url }}" class="site-header__nav-link">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="site-header__nav-link" style="color: {{ section.settings.nav_color }}; font-weight: {{ section.settings.nav_weight }};">{{ link.title }}</a>
       {% endfor %}
     </nav>
 
-    <a href="/" class="site-header__logo">
-      <span class="logo-text">NEEDLORE</span>
-      <span class="logo-sub">Women's Fashion</span>
+    <a href="/" class="site-header__logo" style="color: {{ section.settings.logo_color }};">
+      <span class="logo-text" style="font-weight: {{ section.settings.logo_weight }};">{{ section.settings.logo_text }}</span>
+      <span class="logo-sub">{{ section.settings.logo_subtext }}</span>
     </a>
 
-    <div class="site-header__icons">
+    <div class="site-header__icons" style="color: {{ section.settings.nav_color }};">
       <a href="/search" class="site-header__icon" aria-label="Search">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </a>
@@ -29,9 +29,9 @@
     </div>
   </div>
 
-  <nav id="mobile-nav" class="mobile-nav">
+  <nav id="mobile-nav" class="mobile-nav" style="background: {{ section.settings.header_bg }};">
     {% for link in section.settings.menu.links %}
-      <a href="{{ link.url }}" class="mobile-nav__link">{{ link.title }}</a>
+      <a href="{{ link.url }}" class="mobile-nav__link" style="color: {{ section.settings.nav_color }}; font-weight: {{ section.settings.nav_weight }};">{{ link.title }}</a>
     {% endfor %}
   </nav>
 </header>
@@ -40,7 +40,20 @@
 {
   "name": "Header",
   "settings": [
-    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" }
+    { "type": "color", "id": "header_bg", "label": "Header Background", "default": "#faf8f5" },
+    { "type": "header", "content": "Logo" },
+    { "type": "text", "id": "logo_text", "label": "Logo Text", "default": "NEEDLORE" },
+    { "type": "text", "id": "logo_subtext", "label": "Logo Subtext", "default": "Women's Fashion" },
+    { "type": "color", "id": "logo_color", "label": "Logo Color", "default": "#2a1f1f" },
+    { "type": "select", "id": "logo_weight", "label": "Logo Weight", "options": [
+      { "value": "300", "label": "Light" }, { "value": "400", "label": "Regular" }, { "value": "500", "label": "Medium" }, { "value": "700", "label": "Bold" }
+    ], "default": "500" },
+    { "type": "header", "content": "Navigation" },
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" },
+    { "type": "color", "id": "nav_color", "label": "Nav Link Color", "default": "#2a1f1f" },
+    { "type": "select", "id": "nav_weight", "label": "Nav Link Weight", "options": [
+      { "value": "300", "label": "Light" }, { "value": "400", "label": "Regular" }, { "value": "500", "label": "Medium" }, { "value": "600", "label": "Semi-Bold" }
+    ], "default": "400" }
   ]
 }
 {% endschema %}

@@ -24,6 +24,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <style>
+      :root {
+        --font-display: {{ settings.font_display.family }}, {{ settings.font_display.fallback_families }};
+        --font-sans: {{ settings.font_sans.family }}, {{ settings.font_sans.fallback_families }};
+        
+        --color-bg: {{ settings.color_bg }};
+        --color-text: {{ settings.color_text }};
+        --color-primary: {{ settings.color_primary }};
+        --color-primary-fg: {{ settings.color_bg }};
+        --color-muted: {{ settings.color_muted }};
+        --color-accent: {{ settings.color_accent }};
+        --color-border: {{ settings.color_border }};
+        
+        --heading-size: {{ settings.heading_base_size }}px;
+        --heading-weight: {{ settings.heading_weight }};
+        
+        --body-size: {{ settings.body_base_size }}px;
+        --body-weight: {{ settings.body_weight }};
+        
+        --logo-size: {{ settings.header_logo_size }}px;
+        --nav-size: {{ settings.header_nav_size }}px;
+        
+        --footer-bg: {{ settings.footer_bg }};
+      }
+    </style>
+
     {{ 'styles.css' | asset_url | stylesheet_tag }}
 
     {{ content_for_header }}

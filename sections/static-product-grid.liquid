@@ -1,9 +1,11 @@
-<section class="featured-collection">
-  <div class="featured-collection__inner">
+<section class="featured-collection" style="background: {{ section.settings.bg_color }};">
+  <div class="featured-collection__inner" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
     <div class="featured-collection__header">
       <div>
-        {% if section.settings.eyebrow != blank %}<p class="section-eyebrow">{{ section.settings.eyebrow }}</p>{% endif %}
-        <h2 class="section-title">{{ section.settings.title }}</h2>
+        {% if section.settings.eyebrow != blank %}
+          <p class="section-eyebrow" style="color: {{ section.settings.eyebrow_color }}; font-weight: {{ section.settings.eyebrow_weight }};">{{ section.settings.eyebrow }}</p>
+        {% endif %}
+        <h2 class="section-title" style="color: {{ section.settings.title_color }};">{{ section.settings.title }}</h2>
       </div>
       <a href="/collections/all" class="view-all-link">View all →</a>
     </div>
