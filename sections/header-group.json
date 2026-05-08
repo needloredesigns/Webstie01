@@ -22,7 +22,7 @@
       "settings": {
         "header_bg": "#faf8f5",
         "logo_text": "NEEDLORE",
-        "logo_subtext": "Women's Fashion",
+        "logo_subtext": "",
         "logo_color": "#2a1f1f",
         "logo_weight": "700",
         "menu": "main-menu",
@@ -115,6 +115,7 @@
       "type": "hero-banner",
       "name": "Hero Banner",
       "settings": {
+        "image": "shopify://shop_images/Screen_Shot_2026-05-08_at_4.48.00_PM.png",
         "overlay_opacity": 30,
         "text_color": "#ffffff",
         "eyebrow": "Summer Edit",
