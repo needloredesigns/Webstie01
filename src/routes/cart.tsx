@@ -3,7 +3,7 @@ import { Trash2, Minus, Plus } from "lucide-react";
 import { useCart, cartSubtotal, formatINR } from "@/store/cart";
 
 export const Route = createFileRoute("/cart")({
-  head: () => ({ meta: [{ title: "Your Bag — Lilac & co." }, { name: "description", content: "Review your bag." }] }),
+  head: () => ({ meta: [{ title: "Your Bag — NEEDLORE" }, { name: "description", content: "Review your bag." }] }),
   component: CartPage,
 });
 

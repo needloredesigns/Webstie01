@@ -4,7 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import { useCart, cartSubtotal, formatINR } from "@/store/cart";
 
 export const Route = createFileRoute("/checkout")({
-  head: () => ({ meta: [{ title: "Checkout — Lilac & co." }] }),
+  head: () => ({ meta: [{ title: "Checkout — NEEDLORE" }] }),
   component: CheckoutPage,
 });
 
@@ -21,7 +21,7 @@ function CheckoutPage() {
         <CheckCircle2 className="h-14 w-14 text-primary mx-auto mb-4" />
         <h1 className="font-display text-4xl">Thank you</h1>
         <p className="mt-3 text-muted-foreground">Your order has been placed. We've sent a confirmation to your email.</p>
-        <p className="mt-1 text-sm text-muted-foreground">Order #LC{Math.floor(Math.random() * 90000) + 10000}</p>
+        <p className="mt-1 text-sm text-muted-foreground">Order #NL{Math.floor(Math.random() * 90000) + 10000}</p>
         <Link to="/" className="mt-8 inline-block bg-primary text-primary-foreground px-8 py-3 text-xs uppercase tracking-[0.25em]">
           Back to shop
         </Link>

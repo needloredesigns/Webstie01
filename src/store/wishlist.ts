@@ -15,6 +15,6 @@ export const useWishlist = create<WishlistState>()(
         set((s) => ({ ids: s.ids.includes(id) ? s.ids.filter((x) => x !== id) : [...s.ids, id] })),
       has: (id) => get().ids.includes(id),
     }),
-    { name: "lilac-wishlist" }
+    { name: "needlore-wishlist" }
   )
 );

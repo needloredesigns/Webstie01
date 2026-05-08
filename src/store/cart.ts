@@ -55,7 +55,7 @@ export const useCart = create<CartState>()(
       close: () => set({ isOpen: false }),
       toggle: () => set((s) => ({ isOpen: !s.isOpen })),
     }),
-    { name: "lilac-cart" }
+    { name: "needlore-cart" }
   )
 );
 

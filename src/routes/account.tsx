@@ -4,7 +4,7 @@ import { products } from "@/data/products";
 import { ProductGrid } from "@/components/storefront/ProductGrid";
 
 export const Route = createFileRoute("/account")({
-  head: () => ({ meta: [{ title: "Account — Lilac & co." }] }),
+  head: () => ({ meta: [{ title: "Account — NEEDLORE" }] }),
   component: AccountPage,
 });
 

@@ -5,7 +5,7 @@ import { products } from "@/data/products";
 import { ProductGrid } from "@/components/storefront/ProductGrid";
 
 export const Route = createFileRoute("/search")({
-  head: () => ({ meta: [{ title: "Search — Lilac & co." }] }),
+  head: () => ({ meta: [{ title: "Search — NEEDLORE" }] }),
   component: SearchPage,
 });
 

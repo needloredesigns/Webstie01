@@ -14,9 +14,9 @@ export const Route = createFileRoute("/collections/$slug")({
     if (!cat) return { meta: [{ title: "Not found" }] };
     return {
       meta: [
-        { title: `${cat.name} — Lilac & co.` },
+        { title: `${cat.name} — NEEDLORE` },
         { name: "description", content: cat.blurb },
-        { property: "og:title", content: `${cat.name} — Lilac & co.` },
+        { property: "og:title", content: `${cat.name} — NEEDLORE` },
         { property: "og:description", content: cat.blurb },
         { property: "og:image", content: cat.image },
       ],
