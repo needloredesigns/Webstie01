@@ -1,0 +1,12 @@
+{
+  "current": {
+    "color_primary": "#b87a8a",
+    "color_background": "#faf8f5",
+    "color_text": "#2a1f1f",
+    "color_accent": "#5a3a42",
+    "sections": {
+      "header": { "type": "header", "settings": {} },
+      "footer": { "type": "footer", "settings": {} }
+    }
+  }
+}

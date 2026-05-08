@@ -1,0 +1,47 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content"
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Free shipping on orders over ₹2,500 · ₹100 off on prepaid orders",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    },
+    "footer": {
+      "newsletter_title": "Newsletter",
+      "newsletter_text": "10% off your first order — plus first dibs on new drops.",
+      "newsletter_placeholder": "your@email.com",
+      "newsletter_button": "Join",
+      "copyright": "© {{ year }} NEEDLORE — All rights reserved."
+    },
+    "cart": {
+      "title": "Your Bag",
+      "empty": "Your bag is currently empty.",
+      "continue_shopping": "Continue Shopping",
+      "subtotal": "Subtotal",
+      "shipping_note": "Shipping & taxes calculated at checkout.",
+      "checkout": "Checkout"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Bag",
+      "sold_out": "Sold Out",
+      "size_guide": "Size guide",
+      "description": "Description",
+      "details": "Product Details",
+      "shipping": "Shipping & Returns"
+    }
+  },
+  "collections": {
+    "general": {
+      "all": "All",
+      "no_products": "No products in this collection yet — check back soon."
+    }
+  }
+}

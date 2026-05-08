@@ -1,0 +1,53 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <span class="logo-text">NEEDLORE</span>
+      <p class="site-footer__about">{{ section.settings.about }}</p>
+      <div class="site-footer__social">
+        {% if section.settings.social_instagram != blank %}<a href="{{ section.settings.social_instagram }}" aria-label="Instagram" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>{% endif %}
+        {% if section.settings.social_facebook != blank %}<a href="{{ section.settings.social_facebook }}" aria-label="Facebook" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>{% endif %}
+      </div>
+    </div>
+    <div class="site-footer__links">
+      <h4 class="site-footer__heading">Shop</h4>
+      <ul>
+        {% for link in linklists[section.settings.menu].links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="site-footer__links">
+      <h4 class="site-footer__heading">Help</h4>
+      <ul>
+        <li>Shipping & Delivery</li>
+        <li>Returns & Exchanges</li>
+        <li>Size Guide</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+    <div class="site-footer__newsletter">
+      <h4 class="site-footer__heading">Newsletter</h4>
+      <p>10% off your first order — plus first dibs on new drops.</p>
+      {% form 'customer', class: 'newsletter-form' %}
+        <input type="email" name="contact[email]" placeholder="your@email.com" required>
+        <button type="submit">Join</button>
+      {% endform %}
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} NEEDLORE — All rights reserved.</p>
+    <p>Privacy · Terms · Cookies</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "about", "label": "About text", "default": "Quietly considered womenswear — thoughtful pieces, made to be lived in." },
+    { "type": "link_list", "id": "menu", "label": "Footer menu", "default": "footer" },
+    { "type": "url", "id": "social_instagram", "label": "Instagram URL" },
+    { "type": "url", "id": "social_facebook", "label": "Facebook URL" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,19 @@
+<section class="search-page"><div class="search-page__inner">
+  <h1 class="section-title" style="text-align:center">Search</h1>
+  <form action="/search" method="get" class="search-form">
+    <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search dresses, tops, coord sets…" class="search-input" autofocus>
+  </form>
+  {% if search.performed %}
+    {% if search.results_count == 0 %}
+      <p class="empty-text">No matches for "{{ search.terms }}"</p>
+    {% else %}
+      <p style="text-align:center;font-size:.875rem;color:var(--color-muted);margin-bottom:1.5rem">{{ search.results_count }} result{{ search.results_count | pluralize: '', 's' }}</p>
+      <div class="product-grid">
+        {% for item in search.results %}{% if item.object_type == 'product' %}{% render 'product-card', product: item %}{% endif %}{% endfor %}
+      </div>
+    {% endif %}
+  {% else %}
+    <p class="empty-text">Start typing to find pieces.</p>
+  {% endif %}
+</div></section>
+{% schema %}{"name":"Search","tag":"section"}{% endschema %}

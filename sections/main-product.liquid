@@ -1,0 +1,44 @@
+<section class="product-page">
+  <div class="product-page__inner">
+    <div class="product-page__gallery">
+      <div class="product-page__main-image">
+        {% if product.featured_image %}<img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.featured_image.alt | escape }}" id="main-product-image">{% endif %}
+      </div>
+      <div class="product-page__thumbs">
+        {% for image in product.images %}
+          <button class="product-page__thumb{% if forloop.first %} is-active{% endif %}" onclick="document.getElementById('main-product-image').src='{{ image | image_url: width: 800 }}';document.querySelectorAll('.product-page__thumb').forEach(t=>t.classList.remove('is-active'));this.classList.add('is-active')">
+            <img src="{{ image | image_url: width: 200 }}" alt="{{ image.alt | escape }}" loading="lazy">
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="product-page__info">
+      {% if product.tags contains 'new' %}<p class="section-eyebrow">New arrival</p>
+      {% elsif product.tags contains 'bestseller' %}<p class="section-eyebrow">Bestseller</p>{% endif %}
+      <h1 class="product-page__title">{{ product.title }}</h1>
+      <div class="product-page__price">
+        <span class="product-page__current-price">{{ product.price | money }}</span>
+        {% if product.compare_at_price > product.price %}<span class="product-card__compare-price">{{ product.compare_at_price | money }}</span>{% endif %}
+      </div>
+      <p class="product-page__description">{{ product.description }}</p>
+      {% form 'product', product %}
+        <select name="id" id="product-select" class="product-page__select">
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}"{% unless variant.available %} disabled{% endunless %}>{{ variant.title }} - {{ variant.price | money }}</option>
+          {% endfor %}
+        </select>
+        <div class="product-page__actions">
+          <button type="submit" class="product-page__add-btn"{% unless product.available %} disabled{% endunless %}>
+            {% if product.available %}Add to Bag{% else %}Sold Out{% endif %}
+          </button>
+        </div>
+      {% endform %}
+      <div class="product-page__trust">
+        <div class="trust-item"><span>🚚</span><p>Free Shipping</p></div>
+        <div class="trust-item"><span>↩️</span><p>Easy Returns</p></div>
+        <div class="trust-item"><span>🔒</span><p>Secure Checkout</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}{"name":"Product","tag":"section"}{% endschema %}

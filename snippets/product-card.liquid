@@ -1,0 +1,28 @@
+<article class="product-card">
+  <a href="{{ product.url }}" class="product-card__image-wrap">
+    {% if product.featured_image %}
+      <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.featured_image.alt | escape }}" loading="lazy" class="product-card__image">
+    {% endif %}
+    {% if product.tags contains 'new' %}<span class="product-card__badge">New</span>
+    {% elsif product.compare_at_price > product.price %}<span class="product-card__badge">Sale</span>
+    {% elsif product.tags contains 'bestseller' %}<span class="product-card__badge">Bestseller</span>{% endif %}
+  </a>
+  <div class="product-card__info">
+    <a href="{{ product.url }}"><h3 class="product-card__title">{{ product.title }}</h3></a>
+    <div class="product-card__price">
+      <span>{{ product.price | money }}</span>
+      {% if product.compare_at_price > product.price %}
+        <span class="product-card__compare-price">{{ product.compare_at_price | money }}</span>
+      {% endif %}
+    </div>
+    {% if product.variants.size > 1 %}
+      <div class="product-card__swatches">
+        {% for variant in product.variants limit: 4 %}
+          {% if variant.option1 != blank %}
+            <span class="product-card__swatch" title="{{ variant.option1 }}"></span>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

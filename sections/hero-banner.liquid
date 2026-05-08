@@ -1,0 +1,27 @@
+<section class="hero-banner" style="background-image: url('{{ section.settings.image | image_url: width: 1920 }}');">
+  <div class="hero-banner__overlay"></div>
+  <div class="hero-banner__content hero-banner--{{ section.settings.alignment }}">
+    {% if section.settings.eyebrow != blank %}<span class="hero-banner__eyebrow">{{ section.settings.eyebrow }}</span>{% endif %}
+    <h1 class="hero-banner__title">{{ section.settings.title }}</h1>
+    {% if section.settings.link != blank %}
+      <a href="{{ section.settings.link }}" class="hero-banner__cta">{{ section.settings.cta_text }}</a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow text", "default": "Summer Edit" },
+    { "type": "text", "id": "title", "label": "Title", "default": "New Collection" },
+    { "type": "text", "id": "cta_text", "label": "Button text", "default": "Shop Now" },
+    { "type": "url", "id": "link", "label": "Button link" },
+    { "type": "select", "id": "alignment", "label": "Alignment", "default": "center", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }, { "value": "right", "label": "Right" }
+    ]}
+  ],
+  "presets": [{ "name": "Hero Banner" }]
+}
+{% endschema %}
