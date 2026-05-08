@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="mt-24 border-t border-border bg-secondary/40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="col-span-2 md:col-span-1">
-          <span className="font-display text-2xl tracking-[0.2em]">LILAC</span>
+          <span className="font-display text-2xl tracking-[0.2em]">NEEDLORE</span>
           <p className="mt-3 text-sm text-muted-foreground max-w-xs">
             Quietly considered womenswear from our atelier — thoughtful pieces, made to be lived in.
           </p>
@@ -70,7 +70,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center text-xs text-muted-foreground gap-2">
-          <p>© {new Date().getFullYear()} Lilac & co. — All rights reserved.</p>
+          <p>© {new Date().getFullYear()} NEEDLORE — All rights reserved.</p>
           <p>Privacy · Terms · Cookies</p>
         </div>
       </div>

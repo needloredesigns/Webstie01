@@ -9,10 +9,10 @@ import hero2 from "@/assets/hero-2.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lilac & co. — Quietly considered womenswear" },
-      { name: "description", content: "Discover Lilac & co. — tops, dresses, coord sets and silk loungewear, made with care. Shop new arrivals and bestsellers." },
-      { property: "og:title", content: "Lilac & co. — Quietly considered womenswear" },
-      { property: "og:description", content: "Tops, dresses, coord sets and silk loungewear made with care." },
+      { title: "NEEDLORE — Women's Fashion Clothing Designs" },
+      { name: "description", content: "Discover NEEDLORE — premium women's fashion, tops, dresses, and coord sets designed for the modern woman. Shop the latest collection." },
+      { property: "og:title", content: "NEEDLORE — Women's Fashion" },
+      { property: "og:description", content: "Premium women's fashion clothing designs made with care." },
     ],
   }),
   component: HomePage,

@@ -38,7 +38,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="left" className="w-[85%] sm:w-96 bg-background">
                 <SheetHeader>
-                  <SheetTitle className="font-display text-2xl tracking-widest">LILAC & co.</SheetTitle>
+                  <SheetTitle className="font-display text-2xl tracking-widest">NEEDLORE</SheetTitle>
                 </SheetHeader>
                 <nav className="mt-6 flex flex-col">
                   {NAV.map((n) => (
