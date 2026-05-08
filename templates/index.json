@@ -1,1 +1,109 @@
-{"sections":{"announcement":{"type":"announcement-bar","settings":{}},"category-circles":{"type":"category-circles","settings":{}},"hero":{"type":"hero-banner","settings":{"title":"New Collection","eyebrow":"Summer Edit","cta_text":"Shop Now"}},"new-arrivals-static":{"type":"static-product-grid","settings":{"eyebrow":"Just landed","title":"New Arrivals"}},"hero-2":{"type":"hero-banner","settings":{"title":"Made to be lived in","eyebrow":"The atelier","cta_text":"Explore","alignment":"center"}},"bestsellers-static":{"type":"static-product-grid","settings":{"eyebrow":"Most loved","title":"Bestsellers"}}},"order":["announcement","category-circles","hero","new-arrivals-static","hero-2","bestsellers-static"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": "Free shipping on orders over ₹2,500 · ₹100 off on prepaid orders · Hassle-free returns"
+      }
+    },
+    "category-circles": {
+      "type": "category-circles",
+      "blocks": {
+        "category_PKw6GL": {
+          "type": "category",
+          "settings": {
+            "title": "Tops",
+            "link": "",
+            "image": "shopify://shop_images/Elara.png",
+            "fallback_image": ""
+          }
+        },
+        "category_VwGezb": {
+          "type": "category",
+          "settings": {
+            "title": "Bottoms",
+            "link": "",
+            "image": "shopify://shop_images/Nore.png",
+            "fallback_image": ""
+          }
+        },
+        "category_qYBh83": {
+          "type": "category",
+          "settings": {
+            "title": "Shorts",
+            "link": "",
+            "image": "shopify://shop_images/Lira.png",
+            "fallback_image": ""
+          }
+        },
+        "category_DLK8Cj": {
+          "type": "category",
+          "settings": {
+            "title": "Tote's",
+            "link": "",
+            "image": "shopify://shop_images/Bunny.png",
+            "fallback_image": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_PKw6GL",
+        "category_VwGezb",
+        "category_qYBh83",
+        "category_DLK8Cj"
+      ],
+      "settings": {}
+    },
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+        "eyebrow": "Summer Edit",
+        "title": "New Collection",
+        "cta_text": "Shop Now",
+        "link": "",
+        "alignment": "center"
+      }
+    },
+    "new-arrivals-static": {
+      "type": "static-product-grid",
+      "settings": {
+        "eyebrow": "Just landed",
+        "title": "New Arrivals"
+      }
+    },
+    "hero-2": {
+      "type": "hero-banner",
+      "settings": {
+        "eyebrow": "The atelier",
+        "title": "Made to be lived in",
+        "cta_text": "Explore",
+        "link": "",
+        "alignment": "center"
+      }
+    },
+    "bestsellers-static": {
+      "type": "static-product-grid",
+      "settings": {
+        "eyebrow": "Most loved",
+        "title": "Bestsellers"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "category-circles",
+    "hero",
+    "new-arrivals-static",
+    "hero-2",
+    "bestsellers-static"
+  ]
+}
