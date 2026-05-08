@@ -1,0 +1,71 @@
+<section class="featured-collection">
+  <div class="featured-collection__inner">
+    <div class="featured-collection__header">
+      <div>
+        {% if section.settings.eyebrow != blank %}<p class="section-eyebrow">{{ section.settings.eyebrow }}</p>{% endif %}
+        <h2 class="section-title">{{ section.settings.title }}</h2>
+      </div>
+      <a href="/collections/all" class="view-all-link">View all →</a>
+    </div>
+    <div class="product-grid">
+      {% for block in section.blocks %}
+        <article class="product-card">
+          <a href="#" class="product-card__image-wrap">
+            <img src="{{ block.settings.image | asset_url }}" alt="{{ block.settings.title | escape }}" loading="lazy" class="product-card__image">
+            {% if block.settings.badge != blank %}<span class="product-card__badge">{{ block.settings.badge }}</span>{% endif %}
+          </a>
+          <div class="product-card__info">
+            <a href="#"><h3 class="product-card__title">{{ block.settings.title }}</h3></a>
+            <div class="product-card__price">
+              <span>{{ block.settings.price }}</span>
+              {% if block.settings.compare_price != blank %}
+                <span class="product-card__compare-price">{{ block.settings.compare_price }}</span>
+              {% endif %}
+            </div>
+            <div class="product-card__swatches">
+              {% assign colors = block.settings.colors | split: ',' %}
+              {% for color in colors %}
+                <span class="product-card__swatch" style="background-color: {{ color | strip }};"></span>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Static Products",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Just landed" },
+    { "type": "text", "id": "title", "label": "Title", "default": "New Arrivals" }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        { "type": "text", "id": "image", "label": "Image filename (e.g. p-pinkblouse.jpg)" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "price", "label": "Price (e.g. Rs. 2,900.00)" },
+        { "type": "text", "id": "compare_price", "label": "Compare at price" },
+        { "type": "text", "id": "badge", "label": "Badge (e.g. New)" },
+        { "type": "text", "id": "colors", "label": "Colors (comma separated hex codes)", "default": "#000000" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Static Products",
+      "blocks": [
+        { "type": "product", "settings": { "image": "p-pinkblouse.jpg", "title": "Silk Organza Wrap Blouse", "price": "Rs. 4,500.00", "badge": "New", "colors": "#FFB6C1,#FFFFFF" } },
+        { "type": "product", "settings": { "image": "p-whiteshirt.jpg", "title": "Oversized Poplin Shirt", "price": "Rs. 2,900.00", "badge": "Bestseller", "colors": "#FFFFFF,#87CEEB" } },
+        { "type": "product", "settings": { "image": "p-greendress.jpg", "title": "Pleated Midi Dress", "price": "Rs. 5,900.00", "compare_price": "Rs. 7,500.00", "badge": "Sale", "colors": "#2E8B57,#000000" } },
+        { "type": "product", "settings": { "image": "p-whiteskirt.jpg", "title": "Linen Wrap Midi Skirt", "price": "Rs. 3,500.00", "badge": "", "colors": "#FFFFFF,#F5F5DC" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
