@@ -1,1 +1,201 @@
-{"type":"header","name":"Header group","sections":{"announcement-bar":{"type":"announcement-bar","settings":{}},"header":{"type":"header","settings":{}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": "Free shipping on orders over ₹2,500 · ₹100 off on prepaid orders · Hassle-free returns"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "header_bg": "#faf8f5",
+        "logo_text": "NEEDLORE",
+        "logo_subtext": "Women's Fashion",
+        "logo_color": "#2a1f1f",
+        "logo_weight": "700",
+        "menu": "main-menu",
+        "nav_color": "#2a1f1f",
+        "nav_weight": "400"
+      }
+    },
+    "category_circles_TY8UHp": {
+      "type": "category-circles",
+      "blocks": {
+        "category_nghgjA": {
+          "type": "category",
+          "settings": {
+            "title": "Category Name",
+            "link": "",
+            "fallback_image": ""
+          }
+        },
+        "category_bULEpW": {
+          "type": "category",
+          "settings": {
+            "title": "Tops",
+            "link": "",
+            "fallback_image": "cat-tops.jpg"
+          }
+        },
+        "category_Qb3pE3": {
+          "type": "category",
+          "settings": {
+            "title": "Shirts",
+            "link": "",
+            "fallback_image": "cat-shirts.jpg"
+          }
+        },
+        "category_ngWk9F": {
+          "type": "category",
+          "settings": {
+            "title": "Dresses",
+            "link": "",
+            "fallback_image": "cat-dresses.jpg"
+          }
+        },
+        "category_RRtMKU": {
+          "type": "category",
+          "settings": {
+            "title": "Skirts",
+            "link": "",
+            "fallback_image": "cat-skirts.jpg"
+          }
+        },
+        "category_4TMgpC": {
+          "type": "category",
+          "settings": {
+            "title": "Coord Sets",
+            "link": "",
+            "fallback_image": "cat-coord.jpg"
+          }
+        },
+        "category_3RzBGc": {
+          "type": "category",
+          "settings": {
+            "title": "Premium Loungewear",
+            "link": "",
+            "fallback_image": "cat-loungewear.jpg"
+          }
+        },
+        "category_9cFNmt": {
+          "type": "category",
+          "settings": {
+            "title": "Gifting",
+            "link": "",
+            "fallback_image": "cat-gifting.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "category_nghgjA",
+        "category_bULEpW",
+        "category_Qb3pE3",
+        "category_ngWk9F",
+        "category_RRtMKU",
+        "category_4TMgpC",
+        "category_3RzBGc",
+        "category_9cFNmt"
+      ],
+      "name": "Category Circles",
+      "settings": {}
+    },
+    "hero_banner_mWb4CN": {
+      "type": "hero-banner",
+      "name": "Hero Banner",
+      "settings": {
+        "overlay_opacity": 30,
+        "text_color": "#ffffff",
+        "eyebrow": "Summer Edit",
+        "eyebrow_size": 12,
+        "eyebrow_weight": "400",
+        "title": "New Collection",
+        "title_size": 48,
+        "title_weight": "500",
+        "cta_text": "Shop Now",
+        "link": "",
+        "cta_bg": "#faf8f5",
+        "cta_text_color": "#2a1f1f",
+        "alignment": "center"
+      }
+    },
+    "static_product_grid_LH79y7": {
+      "type": "static-product-grid",
+      "blocks": {
+        "product_jGAC3D": {
+          "type": "product",
+          "settings": {
+            "image": "p-pinkblouse.jpg",
+            "title": "Silk Organza Wrap Blouse",
+            "price": "Rs. 4,500.00",
+            "compare_price": "",
+            "badge": "New",
+            "colors": "#FFB6C1,#FFFFFF"
+          }
+        },
+        "product_WKjaJH": {
+          "type": "product",
+          "settings": {
+            "image": "p-whiteshirt.jpg",
+            "title": "Oversized Poplin Shirt",
+            "price": "Rs. 2,900.00",
+            "compare_price": "",
+            "badge": "Bestseller",
+            "colors": "#FFFFFF,#87CEEB"
+          }
+        },
+        "product_DBixnG": {
+          "type": "product",
+          "settings": {
+            "image": "p-greendress.jpg",
+            "title": "Pleated Midi Dress",
+            "price": "Rs. 5,900.00",
+            "compare_price": "Rs. 7,500.00",
+            "badge": "Sale",
+            "colors": "#2E8B57,#000000"
+          }
+        },
+        "product_aaKVFX": {
+          "type": "product",
+          "settings": {
+            "image": "p-whiteskirt.jpg",
+            "title": "Linen Wrap Midi Skirt",
+            "price": "Rs. 3,500.00",
+            "compare_price": "",
+            "badge": "",
+            "colors": "#FFFFFF,#F5F5DC"
+          }
+        }
+      },
+      "block_order": [
+        "product_jGAC3D",
+        "product_WKjaJH",
+        "product_DBixnG",
+        "product_aaKVFX"
+      ],
+      "name": "Static Products",
+      "settings": {
+        "eyebrow": "Just landed",
+        "title": "New Arrivals"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "category_circles_TY8UHp",
+    "hero_banner_mWb4CN",
+    "static_product_grid_LH79y7"
+  ]
+}
