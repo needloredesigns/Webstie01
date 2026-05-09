@@ -33,14 +33,6 @@
     "category_circles_TY8UHp": {
       "type": "category-circles",
       "blocks": {
-        "category_nghgjA": {
-          "type": "category",
-          "settings": {
-            "title": "Category Name",
-            "link": "",
-            "fallback_image": ""
-          }
-        },
         "category_bULEpW": {
           "type": "category",
           "settings": {
@@ -60,7 +52,7 @@
         "category_ngWk9F": {
           "type": "category",
           "settings": {
-            "title": "Dresses",
+            "title": "Bottoms",
             "link": "",
             "fallback_image": "cat-dresses.jpg"
           }
@@ -84,7 +76,7 @@
         "category_3RzBGc": {
           "type": "category",
           "settings": {
-            "title": "Premium Loungewear",
+            "title": "Tote's",
             "link": "",
             "fallback_image": "cat-loungewear.jpg"
           }
@@ -99,7 +91,6 @@
         }
       },
       "block_order": [
-        "category_nghgjA",
         "category_bULEpW",
         "category_Qb3pE3",
         "category_ngWk9F",
