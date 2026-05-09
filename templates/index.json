@@ -17,6 +17,22 @@
     },
     "bestsellers-static": {
       "type": "static-product-grid",
+      "blocks": {
+        "product_TKtz3b": {
+          "type": "product",
+          "settings": {
+            "image": "",
+            "title": "",
+            "price": "",
+            "compare_price": "",
+            "badge": "",
+            "colors": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "product_TKtz3b"
+      ],
       "settings": {
         "eyebrow": "Most loved",
         "title": "Bestsellers"
