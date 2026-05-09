@@ -14,7 +14,7 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
-        "text": "Free shipping on orders over ₹2,500 · ₹100 off on prepaid orders · Hassle-free returns"
+        "text": "Free shipping on orders over 150$"
       }
     },
     "header": {
@@ -130,7 +130,7 @@
           "settings": {
             "image": "p-pinkblouse.jpg",
             "title": "Silk Organza Wrap Blouse",
-            "price": "Rs. 4,500.00",
+            "price": "$39.99",
             "compare_price": "",
             "badge": "New",
             "colors": "#FFB6C1,#FFFFFF"
@@ -141,7 +141,7 @@
           "settings": {
             "image": "p-whiteshirt.jpg",
             "title": "Oversized Poplin Shirt",
-            "price": "Rs. 2,900.00",
+            "price": "$39.99",
             "compare_price": "",
             "badge": "Bestseller",
             "colors": "#FFFFFF,#87CEEB"
@@ -152,8 +152,8 @@
           "settings": {
             "image": "p-greendress.jpg",
             "title": "Pleated Midi Dress",
-            "price": "Rs. 5,900.00",
-            "compare_price": "Rs. 7,500.00",
+            "price": "$39.99",
+            "compare_price": "",
             "badge": "Sale",
             "colors": "#2E8B57,#000000"
           }
@@ -163,7 +163,7 @@
           "settings": {
             "image": "p-whiteskirt.jpg",
             "title": "Linen Wrap Midi Skirt",
-            "price": "Rs. 3,500.00",
+            "price": "$39.99",
             "compare_price": "",
             "badge": "",
             "colors": "#FFFFFF,#F5F5DC"

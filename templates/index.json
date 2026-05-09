@@ -12,7 +12,7 @@
     "announcement": {
       "type": "announcement-bar",
       "settings": {
-        "text": "Free shipping on orders over ₹2,500 · ₹100 off on prepaid orders · Hassle-free returns"
+        "text": "Free shipping on orders over 150$"
       }
     },
     "bestsellers-static": {
