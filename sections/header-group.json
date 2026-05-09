@@ -181,6 +181,16 @@
         "eyebrow": "Just landed",
         "title": "New Arrivals"
       }
+    },
+    "featured_collection_4JtPHj": {
+      "type": "featured-collection",
+      "name": "Featured Collection",
+      "settings": {
+        "eyebrow": "Just landed",
+        "title": "New Arrivals",
+        "collection": "",
+        "limit": 4
+      }
     }
   },
   "order": [
@@ -188,6 +198,7 @@
     "header",
     "category_circles_TY8UHp",
     "hero_banner_mWb4CN",
-    "static_product_grid_LH79y7"
+    "static_product_grid_LH79y7",
+    "featured_collection_4JtPHj"
   ]
 }
