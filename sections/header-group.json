@@ -37,7 +37,7 @@
           "type": "category",
           "settings": {
             "title": "Tops",
-            "link": "",
+            "link": "shopify://pages/tops",
             "fallback_image": "cat-tops.jpg"
           }
         },
@@ -45,7 +45,7 @@
           "type": "category",
           "settings": {
             "title": "Shirts",
-            "link": "",
+            "link": "shopify://pages/bottoms",
             "fallback_image": "cat-shirts.jpg"
           }
         },
